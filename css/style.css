@@ -28,26 +28,22 @@ li{
     margin-bottom: 10px;
 }
 
-#sidebar-elements li:hover{
-    color: white;
-    border-left: 2px solid rgb(173,255,46);
-}
 
 /* top-container */
 
-.top-container{
+#top-container{
     display: flex;
 }
 
 /* wrapper-container */
 
-.wrapper-container{
+#wrapper-container{
     width: calc(100% - 250px);
 }
 
  /* SIDEBAR */
 
-.sidebar-container{
+#sidebar-container{
     width: 250px;
     height: calc(100vh - 100px);
     background-color: black;
@@ -72,7 +68,7 @@ li{
     display: flex;
     align-items: center;
 }
-#menu-list{
+.menu-list{
     height: 120px;
 }
 
@@ -129,11 +125,14 @@ li{
 .name{
     color: white;
 }
+#sidebar-elements li:hover{
+    color: white;
+    border-left: 2px solid rgb(173,255,46);
+}
 
 /* HEADER */
 
 header{
-    border: var(--bor);
     height: 80px;
     background-color: rgb(9,11,18);
     display: flex;
@@ -153,10 +152,48 @@ header{
 /* MAIN */
 
 main{
-    border: var(--bor);
     height: calc(100vh - 180px);
     background-color: rgb(20,25,34);
     overflow: auto;
+    padding: 10px;
+}
+.main-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(78,78,78);
+    justify-content: center;
+
+}
+.main-nav ul li:hover{
+    color: white;
+    border-bottom: 1px solid rgb(173,255,46);
+}
+
+/* music gallery */
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery li{
+    flex-basis: calc(100% / 6);
+    text-align: center;
+}
+ .gallery h4{
+    margin: 10px 0;
+ }
+.main-title{
+    margin: 20px;
+}
+.subtitle{
+    font-size: 13px;
+    color: rgb(78,78,78);
+}
+.description{
+    margin: 20px;
+}
+.circle{
+    border-radius: 50%;
 }
 
 /* FOOTER */
@@ -173,8 +210,24 @@ footer{
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 552px) {
-    .sidebar-container{
+/* laptop */
+@media screen and (max-width: 992px){
+    .gallery li{
+        flex-basis: calc(100% / 4);
+    }
+
+}
+
+/* tablet */
+@media screen and (max-width: 768px){
+    .gallery li{
+        flex-basis: calc(100% / 2);
+    }
+}
+
+/* smartphone */
+@media screen and (max-width: 576px){
+    #sidebar-container{
         width: 60px;
     }
     main , header{
@@ -195,5 +248,8 @@ footer{
         display: flex;
         flex-direction: column;
         width: 70px;
+     }
+     .line{
+        display: none;
      }
 }
