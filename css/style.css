@@ -5,7 +5,195 @@
     box-sizing: border-box;
 }
 
+:root{
+    --bor: 2px dashed red;
+}
+
 /* GENERICS */
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+#sidebar-elements li:hover{
+    color: white;
+    border-left: 2px solid rgb(173,255,46);
+}
+
+/* top-container */
+
+.top-container{
+    display: flex;
+}
+
+/* wrapper-container */
+
+.wrapper-container{
+    width: calc(100% - 250px);
+}
+
+ /* SIDEBAR */
+
+.sidebar-container{
+    width: 250px;
+    height: calc(100vh - 100px);
+    background-color: black;
+    color: rgb(78,78,78);
+}
+.logo-box{
+    height: 80px;
+    display: flex;
+}
+.logo{
+    width: 150px;
+    margin-left: 20px;
+}
+.logo-small{
+    display: none;
+}
+.icon{
+    width: 25px;
+    margin-right: 5px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+#menu-list{
+    height: 120px;
+}
+
+/* playlist */
+#playlist{
+    height: 90px;
+}
+.list-title{
+    color: white;
+}
+.add-playlist{
+    display: flex;
+    align-items: center;
+}
+.fa-square-plus{
+    font-size: 45px;
+    margin-right: 5px;
+}
+#playlist-box{
+    height: calc(100vh - 600px);
+    overflow: auto;
+}
+
+
+/* user */
+#user{
+    height: 100px;
+    margin-top: 130px;
+}
+
+.download{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+.download-icon{
+    width: 20px;
+    margin-right: 5px;
+}
+.line{
+    border-bottom: 1px solid;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile-icon{
+    width: 30px;
+    padding: 5px;
+    background-color: rgb(78,78,78);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.name{
+    color: white;
+}
+
+/* HEADER */
+
+header{
+    border: var(--bor);
+    height: 80px;
+    background-color: rgb(9,11,18);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.upgrade{
+    padding: 10px 30px;
+    border-radius: 40px;
+    border: 1px solid white;
+    margin-right: 5px;    
+}
+.upgrade:hover{
+    border: 1px solid rgb(173,255,46);
+}
+
+/* MAIN */
+
+main{
+    border: var(--bor);
+    height: calc(100vh - 180px);
+    background-color: rgb(20,25,34);
+    overflow: auto;
+}
+
+/* FOOTER */
+
+footer{
+    height: 100px;
+    background-color: rgb(40,40,40);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: var(--bor);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 552px) {
+    .sidebar-container{
+        width: 60px;
+    }
+    main , header{
+        width: calc(100vw - 60px);
+    }
+    .logo{
+        display: none;
+    }
+    .logo-small{
+        display: block;
+        width: 35px;
+        margin-left: 15px;
+    }
+    #sidebar-elements a{
+        display: none;
+    }
+     #sidebar-elements {
+        display: flex;
+        flex-direction: column;
+        width: 70px;
+     }
 }
