@@ -209,8 +209,6 @@ footer{
 .col-left , .col-right{
     flex-basis: 25%;
     padding: 0 10px;
-
-    
 }
 .card-left , .card-right{
     display: flex;
@@ -218,6 +216,7 @@ footer{
 }
 .card-right{
     justify-content: flex-end;
+    flex-basis: 100%;
 }
 .col-left img{
     max-width: 60px;
@@ -231,7 +230,7 @@ footer{
 }
 .vol-bar{
     border: 2px solid gray;
-    width: 100px;
+    width: 80px;
     border-radius: 20px;
 }
 .col-center{
@@ -242,10 +241,10 @@ footer{
     text-align: center;
 }
 .card-center{
-    border: 2px dashed red;
+    flex-basis: 100%;
 }
 .song-bar{
-   width: 500px;
+   width: 100%;
    border: 2px solid gray;
    height: 2px;
    border-radius: 20px;
@@ -277,6 +276,15 @@ footer{
 @media screen and (max-width: 768px){
     .gallery li{
         flex-basis: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 680px){
+    .vol-bar{
+        max-width: 40px;
+    }
+    .col-left img{
+        max-width: 40px;
     }
 }
 
