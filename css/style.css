@@ -1,12 +1,8 @@
-/* reset */
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root{
-    --bor: 2px dashed red;
 }
 
 /* GENERICS */
@@ -27,7 +23,6 @@ li{
     padding: 0 20px;
     margin-bottom: 10px;
 }
-
 
 /* top-container */
 
@@ -205,10 +200,70 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    border: var(--bor);
+}
+.row{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.col-left , .col-right{
+    flex-basis: 25%;
+    padding: 0 10px;
+
+    
+}
+.card-left , .card-right{
+    display: flex;
+    align-items: center;
+}
+.card-right{
+    justify-content: flex-end;
+}
+.col-left img{
+    max-width: 60px;
+}
+.song-name{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.icon-space{
+    margin: 0 10px;
+}
+.vol-bar{
+    border: 2px solid gray;
+    width: 100px;
+    border-radius: 20px;
+}
+.col-center{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.card-center{
+    border: 2px dashed red;
+}
+.song-bar{
+   width: 500px;
+   border: 2px solid gray;
+   height: 2px;
+   border-radius: 20px;
+   margin: 0 20px;
+}
+.progress-bar , .play-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.fa-circle-play{
+    font-size: 1.7rem;
+    margin: 0 20px;
 }
 
-/* RESPONSIVE */
+
+/****** RESPONSIVE *****/
 
 /* laptop */
 @media screen and (max-width: 992px){
